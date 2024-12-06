@@ -31,12 +31,20 @@ using namespace std;
 //		
 void readFile(string fileName, string lines[], int max_lines, int& len);
 
+// Function to combine two alphabetically sorted lists into one alphabetically sorted list.
+// Preconditions:	a_arr[] and b_arr[] must be an alphabetically sorted string arrays.
+//		a_len and b_len must be the lengths of a_arr and b_arr respectively.
+//		rtn_max must be the size of rtn_arr.
+// Postconditions:	populates rtn_len with the alphabetically sorted combination of a_arr and b_arr.
+//		stores the length of rtn_arr in rtn_len.
+//
 void concatSort(string a_arr[], string b_arr[], string rtn_arr[], int a_len, int b_len, int rtn_max, int& rtn_len);
 
 // Function to write a file from an array.
 // Precondition:	string fileName is a valid file name.
 //		int length is the length of lines[].
 // Postcondition:	Outputs lines in file fileName.
+//
 void writeFile(string fileName, string lines[], int len);
 
 int main()
