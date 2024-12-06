@@ -10,13 +10,15 @@
 // Program Output: The result of the desired operation.
 // Supplied Constants: The 4 available operators (+, -, *, /).
 
+#include <string>
 #include <iostream>
 #include <exception>
 using namespace std;
 
 int main()
 {
-    char input, operation;
+	string input;
+	char sentinel, operation;
     int x, y;
 
 	cout << "Calculator: Enter 2 integers and a 4 function operator or 'q' to quit." << endl << endl;
@@ -25,20 +27,15 @@ int main()
 		while (true)
 		{
 			cin >> input;
-			if (tolower(input) != 'q')
+			sentinel = input[0];
+			if (tolower(sentinel) != 'q')
 			{
-				if (isdigit(input))
-					x = input - '0';
-				else
-					throw domain_error("Invalid Operand");
+				x = stod(input);
 			}
 			else
 				break;
 			cin >> operation >> input;
-			if (isdigit(input))
-				y = input - '0';
-			else
-				throw domain_error("Invalid Operand");
+			y = stod(input);
 			if (operation == '+')
 				cout << " = " << x + y << endl;
 			else if (operation == '-')
