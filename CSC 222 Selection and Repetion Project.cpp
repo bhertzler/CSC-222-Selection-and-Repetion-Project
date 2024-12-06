@@ -19,7 +19,7 @@ int main()
 {
 	string input;
 	char sentinel, operation;
-    int x, y;
+    double x, y;
 
 	cout << "Calculator: Enter 2 integers and a 4 function operator or 'q' to quit." << endl << endl;
 	try
