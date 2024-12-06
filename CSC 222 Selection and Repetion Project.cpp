@@ -3,7 +3,7 @@
 
 // Benjamin Hertzler
 // Selection and Repetion Programming Project
-// Program 1: Calculator
+// Program 2: Calculator, Part 2
 
 // Description: This program takes two operations and a +, -, *, / operator and outputs the result. Enter q to quit.
 // Required User Input: 2 integers and an operator, or q to quit.
@@ -39,24 +39,16 @@ int main()
 				y = input - '0';
 			else
 				throw domain_error("Invalid Operand");
-			switch (operation)
-			{
-			case '+':
+			if (operation == '+')
 				cout << " = " << x + y << endl;
-				break;
-			case '-':
+			else if (operation == '-')
 				cout << " = " << x - y << endl;
-				break;
-			case '*':
+			else if (operation == '*')
 				cout << " = " << x * y << endl;
-				break;
-			case '/':
+			else if (operation == '/')
 				cout << " = " << x / y << endl;
-				break;
-			default:
+			else
 				throw domain_error("Invalid Operator");
-				break;
-			}
 		}
 	}
 	catch (const exception& err)
